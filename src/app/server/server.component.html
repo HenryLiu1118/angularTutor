@@ -1,3 +1,4 @@
+<!--
 <h4>This is a Component Example. </h4>
 <p> Server with ID {{ serverId }}  is {{ serverStatus }} </p>
 <p> {{ 'Server' }} with ID {{ serverId }}  is {{ serverStatus }} </p>
@@ -47,4 +48,49 @@
 
     <div><span style="color: cornflowerblue; margin-right: 5px;">Student Major: </span> <span>{{ student.major }}</span></div>
   </div>
+</div>
+-->
+<div class="container-fluid" style = "background-color: antiquewhite; height: 700px;">
+  <div class="jumbotron text-center box1">
+    <h1>Welcome to My Kitchen</h1>
+  </div>
+
+  <div class="container">
+    <div class = "row" >
+      <div class = "col-sm-6 box2">
+        <div *ngFor = "let food of foods">
+          <div class="box4">
+            <div class = "inline_block">
+              <img src= {{food.URL}} class="img1">
+            </div>
+            <div class = "inline_block" style="margin-left: 15%">
+              <h4>{{food.name}}</h4>
+              <button class="btn btn-info" (click)="Chooseingredients(food.name)">Select</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class = "col-sm-6">
+        <div class="box5">
+          <button class="btn btn-secondary" style="width: 50%" (click)="OrderMenu()">Order</button>
+          <button class="btn btn-success" style="width: 50%" (click)="ResetMeal()">Reset</button>
+          <div>
+            Ingredients Chosen:
+            <span *ngIf="Ingredients.length > 0">{{Ingredients[0]}} </span>
+            <span *ngIf="Ingredients.length > 1">{{Ingredients[1]}}</span>
+          </div>
+        </div>
+        <div class="card box3">
+          <img class="card-img-top" src = {{MealUrl}} alt="Card image" style="height: 240px; width: 100%">
+          <div class="card-body">
+            <h4 class="card-title">{{MealName}}</h4>
+            <p class="card-text">Some example</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
 </div>

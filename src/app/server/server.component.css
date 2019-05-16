@@ -1,8 +1,38 @@
-.informBoxBoarder{
-  border-bottom: solid 2px;
-  border-left: solid 2px;
-  border-right: solid 2px;
-  border-top: solid 2px;
-  width: 300px;
-  border-color: cornflowerblue;
+.box1 {
+  background-image: url("/src/assets/images/najianyujian.jpg");
+  background-size: 100% 100%;
+}
+
+.box2 {
+  height: 400px;
+  overflow: scroll;
+  border: 1px greenyellow solid;
+}
+
+.box3 {
+  margin-left: 10%;
+  margin-top: 5%;
+  margin-right: 10%;
+  border: 1px solid #ddd;
+  background-color: lightgoldenrodyellow;
+}
+
+.box4 {
+  border: 1px darkseagreen solid;
+}
+
+.box5 {
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.inline_block {
+  display: inline-block;
+}
+
+.img1 {
+  border-radius: 4px;
+  height: 100px;
+  width: 150px;
 }
