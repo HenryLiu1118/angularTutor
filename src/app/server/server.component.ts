@@ -28,7 +28,7 @@ export class ServerComponent {
       new Menu('Scrambled Eggs with Tomato', 'EggTomato', 'assets/images/Scrambled Eggs with Tomato.jpg'),
       new Menu('Spicy chicken', 'ChickenDry Pepper', 'assets/images/Spicy chicken.jpg')];
 
-    MealName = 'Your Meal: ';
+    MealName = '';
     MealUrl = 'assets/images/najianyujian.jpg';
     Ingredients = [];
 
@@ -52,13 +52,13 @@ export class ServerComponent {
             this.MealUrl = this.menus[idx].URL;
           }
       } else {
-        this.MealName = 'You need one more Ingredient';
+        this.MealName = 'You need more Ingredient';
       }
     }
 
     ResetMeal() {
       this.Ingredients = [];
-      this.MealName = 'Your Meal';
+      this.MealName = '';
       this.MealUrl = 'assets/images/najianyujian.jpg';
     }
 
